@@ -57,7 +57,7 @@
 <?php 
     if(isset($_REQUEST['submit_request'])){
         $name=$_REQUEST['name'];
-        $name=md5($name);
+        //$name=md5($name);
         $email=$_REQUEST['email'];
         $subject=$_REQUEST['subject'];
         $mobile=$_REQUEST['mobile'];
