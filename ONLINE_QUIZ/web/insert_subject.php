@@ -60,7 +60,9 @@
         //$name=md5($name);
         $email=$_REQUEST['email'];
         $subject=$_REQUEST['subject'];
+        
         $mobile=$_REQUEST['mobile'];
+        $g=$_REQUEST['gender'];
         $qualification=$_REQUEST['qualification'];
         $address=$_REQUEST['address'];
         
@@ -79,11 +81,11 @@
 
         
         include("connection.php");
-        $q="INSERT INTO `expert`(`eid`, `name`, `email`, `expert_in`, `mobile`, `qualification`, `address`, `date`, `time`,`status`,`password`) VALUES ('','$name','$email','$subject','$mobile','$qualification','$address','$date','$time','0','default')";
+        $q="INSERT INTO `expert`(`eid`, `name`, `email`, `expert_in`, `mobile`, `gender` , `qualification`, `address`, `date`, `time`,`status`,`password`) VALUES ('','$name','$email','$subject','$mobile','$g','$qualification','$address','$date','$time','0','default')";
         $run =mysqli_query($obj,$q);
         if($run){
             echo "<script>window.location.assign('expert_registration.php?sub=need_approval')</script>";
-            //echo $q;
+            //echo $g;
         }else{
             echo mysqli_error($obj);
         }

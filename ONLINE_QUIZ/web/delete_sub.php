@@ -30,6 +30,23 @@
             echo mysqli_error($obj);
         }
     }else{
-        mysqli_close($obj);
+       // mysqli_close($obj);
     }
 ?>
+<?php
+    if(isset($_REQUEST['delete'])){
+        $d=$_REQUEST['delete'];
+        $obj = mysqli_connect("localhost","root","","quiz_db");
+        $qe="DELETE FROM `expert` WHERE `eid`='$d'";
+        $run=mysqli_query($obj,$qe);
+        if($run>0){
+            echo "<script>window.location.assign('edit_expert.php')</script>";
+        }else{
+           echo mysqli_error($obj);
+        }
+    }else{
+       
+        echo $d;
+    }
+
+    ?>
