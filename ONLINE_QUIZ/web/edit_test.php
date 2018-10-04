@@ -135,6 +135,9 @@
                 ?>
                 <td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#edit<?php echo $row[0];?>'>EDIT</td>
                 <td><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#delete<?php echo $row[0];?>'>DELETE</td>
+                </div>
+            </div>
+        </div>
                 
                             <!-- EDIT Modal -->
                 <div class="modal fade" id="edit<?php echo $row[0]; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
